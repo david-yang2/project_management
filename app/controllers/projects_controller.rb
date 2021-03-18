@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  # set up controller with user authentication before running any actions
+  before_action :authenticate_user!
   before_action :set_project, only: %i[ show edit update destroy ]
 
   # GET /projects or /projects.json
